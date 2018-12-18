@@ -34,10 +34,10 @@ end
 
 #bash 'rails_start' do
 #  user 'vagrant'
-#  cwd '/home/shared/ss_trainy/'
+#  cwd '/home/shared/ss_trainee/'
 #  environment ({'HOME' => '/home/vagrant', 'USER' => 'vagrant'})
 #  code <<-EOH
 #    echo $USER
-#    cd /home/shared/ss_trainy && rails s
+#    cd /home/shared/ss_trainee && rails s
 #  EOH
 #end
