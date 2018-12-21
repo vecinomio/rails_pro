@@ -1,2 +1,3 @@
 
-.vagrant/
+.vagrant
+site-cookbooks/main/.delivery

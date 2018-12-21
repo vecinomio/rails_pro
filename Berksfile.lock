@@ -1,0 +1,8 @@
+DEPENDENCIES
+  main
+    path: site-cookbooks/main
+
+GRAPH
+  main (0.1.0)
+    ruby_rbenv (~> 2.1.2)
+  ruby_rbenv (2.1.2)
