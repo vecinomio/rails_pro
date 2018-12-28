@@ -14,6 +14,11 @@ pipeline {
                 }    
             }
         }
+        stage ('Build') {
+            steps {
+                echo 'Building....'
+            }    
+        }
         stage ('Tests') {
             steps {
                 echo 'Trying some tests'
