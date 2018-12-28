@@ -46,3 +46,23 @@ execute 'bundle_install' do # Do bundle install
   action :run
 end
 
+systemd_unit 'ror.service' do
+  content({Unit: {
+            Description: 'Run rails',
+            Requires: 'network.target',
+          },
+          Service: {
+            Type: 'simple',
+	    User: 'vagrant',
+	    Group: 'vagrant',
+	    WorkingDirectory: '/home/shared',
+            ExecStart: '/bin/bash -lc \'bundle exec rails server\'',
+            Restart: 'always',
+	    TimeoutSec: '60s',
+	    RestartSec: '30s',
+          },
+          Install: {
+            WantedBy: 'multi-user.target',
+          }})
+  action [:create, :enable, :start]
+end
