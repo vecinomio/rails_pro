@@ -7,10 +7,11 @@ pipeline {
                 echo 'Trying to setup VM.....'
                 
                 // Change to the project dir
-                dir('/Users/imaki/vagrant-projects/testvm') {
+                dir('/Users/imaki/vagrant-projects/bla') {
+                    sh 'berks install'
                     
                     // Start freestyle job that create VM using vagrant plugin
-                    build 'test1_up'
+                    build 'work_env'
                 }    
             }
         }
