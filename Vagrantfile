@@ -28,7 +28,7 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.network "forwarded_port", guest: 3000, host: 3000
- 
+
   # Install the latest version of Chef.
   # For more information see https://github.com/chef/vagrant-omnibus
   #
@@ -38,7 +38,9 @@ Vagrant.configure(2) do |config|
   config.berkshelf.enabled = true
 
   # Provision with Chef Zero
-  #
+  config.vm.provision "rspec", type: "shell", run: "never" do |s|
+    s.inline = "cd /home/shared && rspec spec"
+  end
   config.vm.provision 'shell', inline: 'sudo yum update -y && sudo yum install epel-release -y'
   config.vm.synced_folder 'ss_trainee', '/home/shared'
   config.vm.provision :chef_solo do |chef|
