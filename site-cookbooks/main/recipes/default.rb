@@ -46,7 +46,7 @@ execute 'bundle_install' do # Do bundle install
   action :run
 end
 
-systemd_unit 'ror.service' do
+systemd_unit 'ror.service' do # Create RoR service to autostart Rails
   content({Unit: {
             Description: 'Run rails',
             Requires: 'network.target',

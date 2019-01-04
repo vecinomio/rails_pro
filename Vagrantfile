@@ -39,7 +39,7 @@ Vagrant.configure(2) do |config|
 
   # Provision with Chef Zero
   config.vm.provision "rspec", type: "shell", run: "never" do |s|
-    s.inline = "cd /home/shared && rspec spec"
+    s.inline = "cd /home/shared && rspec -f d spec"
   end
   config.vm.provision 'shell', inline: 'sudo yum update -y && sudo yum install epel-release -y'
   config.vm.synced_folder 'ss_trainee', '/home/shared'
