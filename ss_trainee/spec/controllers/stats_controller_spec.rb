@@ -1,5 +1,5 @@
 require 'rails_helper'
-#Hello from test
+#Hello from test & again hello hello!!!
 
 RSpec.describe StatsController, type: :controller do
   describe '#bark' do
