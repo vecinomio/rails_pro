@@ -1,21 +1,6 @@
 require 'rails_helper'
 #Hello from test & again hello hello!!!
 
-#Bla Bla Bla
-
-=begin
-;dlsfhkdffgkjdbfhfjkhbsf
-fsfhksdhfksdhfkj
-dosfhjkssdhjfl;sjdfiku
-dfbkdjshfjksbdhnfsd
-fsdfjsdhfkhsf
-asdpfjsiuh
-sfpsiufswf
-dsfhsdfijas
-dfbkdjshfjksbdhnfsdfsifus
-\find { |e|  }
-=end
-
 
 
 RSpec.describe StatsController, type: :controller do
@@ -26,3 +11,6 @@ RSpec.describe StatsController, type: :controller do
     end
   end
 end
+
+
+#Hello from here
