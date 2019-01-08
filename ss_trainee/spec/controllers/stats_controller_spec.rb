@@ -7,7 +7,15 @@ require 'rails_helper'
 ;dlsfhkdffgkjdbfhfjkhbsf
 fsfhksdhfksdhfkj
 dosfhjkssdhjfl;sjdfiku
+dfbkdjshfjksbdhnfsd
+fsdfjsdhfkhsf
+asdpfjsiuh
+sfpsiufswf
+dsfhsdfijas
+dfbkdjshfjksbdhnfsdfsifus
+\find { |e|  }
 =end
+
 
 
 RSpec.describe StatsController, type: :controller do
