@@ -3,6 +3,12 @@ require 'rails_helper'
 
 #Bla Bla Bla
 
+=begin
+;dlsfhkdffgkjdbfhfjkhbsf
+fsfhksdhfksdhfkj
+dosfhjkssdhjfl;sjdfiku
+=end
+
 
 RSpec.describe StatsController, type: :controller do
   describe '#bark' do
