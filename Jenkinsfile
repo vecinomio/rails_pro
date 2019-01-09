@@ -5,12 +5,12 @@ pipeline {
     }
 
     stages {
-        stage ('Checkout') {
-            steps {
-                echo 'Checkout....'
-                checkout([$class: 'GitSCM', branches: [[name: '*']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/vecinomio/rails_pro.git']]])
-            }
-        }
+        //stage ('Checkout') {
+            //steps {
+                //echo 'Checkout....'
+                //checkout([$class: 'GitSCM', branches: [[name: '*']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/vecinomio/rails_pro.git']]])
+            //}
+        //}
         stage ('creating vm') {
             steps {
 
