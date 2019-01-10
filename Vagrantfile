@@ -11,14 +11,14 @@ Vagrant.configure(2) do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   #
 
-  config.vm.hostname = 'testlab'
-  config.vm.define 'testlab'
+  config.vm.hostname = 'laba'
+  config.vm.define 'laba'
   config.vm.provider "virtualbox" do |vb|
     # For a complete reference, please see the online documentation at
     # https://docs.vagrantup.com/v2/virtualbox/configuration.html
 
     # Name used in Oracle VM VirtualBox Manager GUI
-    vb.name = "testlab"
+    vb.name = "laba"
 
     # Customize the amount of memory on the VM (in MB):
     vb.memory = "2048"
