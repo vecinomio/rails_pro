@@ -16,7 +16,7 @@ pipeline {
 
                 sh 'berks install'
 
-                // Start freestyle job that create VM using vagrant plugin
+                // Create VM (when the job will finish VM will be dead!!!)
                 sh 'vagrant up'
             }
         }
