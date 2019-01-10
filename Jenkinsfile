@@ -17,7 +17,7 @@ pipeline {
                 sh 'berks install'
 
                 // Start freestyle job that create VM using vagrant plugin
-                build 'work_env'
+                sh 'vagrant up'
             }
         }
         stage ('Build') {
