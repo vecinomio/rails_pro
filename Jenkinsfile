@@ -29,6 +29,7 @@ pipeline {
             steps {
                 echo 'Trying some tests'
                 sh 'vagrant provision --provision-with rspec'
+                githubNotify account: 'vecinomio', context: 'jenkins2-test', description: 'some description from Igor', gitApiUrl: '', repo: 'rails_pro', sha: '', status: 'SUCCESS', targetUrl: ''
             }
         }
         stage ('Deploy') {
