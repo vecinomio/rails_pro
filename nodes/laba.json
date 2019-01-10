@@ -124,8 +124,8 @@
           },
           "state": "up",
           "arp": {
-            "10.0.2.3": "52:54:00:12:35:03",
-            "10.0.2.2": "52:54:00:12:35:02"
+            "10.0.2.2": "52:54:00:12:35:02",
+            "10.0.2.3": "52:54:00:12:35:03"
           },
           "routes": [
             {
@@ -195,16 +195,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "1057825",
-              "packets": "13876",
+              "bytes": "1126443",
+              "packets": "14994",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "170763555",
-              "packets": "123839",
+              "bytes": "170789120",
+              "packets": "124636",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -263,7 +263,7 @@
             "Product Name": "VirtualBox",
             "Version": "1.2",
             "Serial Number": "0",
-            "UUID": "58436ce9-16f4-4e94-abff-9b0e4f664098",
+            "UUID": "12e18732-f8de-44a6-852b-2ea88d354e08",
             "Wake-up Type": "Power Switch",
             "SKU Number": "Not Specified",
             "Family": "Virtual Machine"
@@ -273,7 +273,7 @@
         "product_name": "VirtualBox",
         "version": "1.2",
         "serial_number": "0",
-        "uuid": "58436ce9-16f4-4e94-abff-9b0e4f664098",
+        "uuid": "12e18732-f8de-44a6-852b-2ea88d354e08",
         "wake_up_type": "Power Switch",
         "sku_number": "Not Specified",
         "family": "Virtual Machine"
@@ -389,10 +389,6 @@
           "size": "14419",
           "refcount": "0"
         },
-        "ppdev": {
-          "size": "17671",
-          "refcount": "0"
-        },
         "iosf_mbi": {
           "size": "15582",
           "refcount": "0"
@@ -405,8 +401,16 @@
           "size": "22094",
           "refcount": "0"
         },
+        "ppdev": {
+          "size": "17671",
+          "refcount": "0"
+        },
         "ghash_clmulni_intel": {
           "size": "13273",
+          "refcount": "0"
+        },
+        "aesni_intel": {
+          "size": "189414",
           "refcount": "0"
         },
         "snd_intel8x0": {
@@ -417,18 +421,6 @@
           "size": "130556",
           "refcount": "1"
         },
-        "ac97_bus": {
-          "size": "12730",
-          "refcount": "1"
-        },
-        "snd_pcm": {
-          "size": "105708",
-          "refcount": "2"
-        },
-        "aesni_intel": {
-          "size": "189414",
-          "refcount": "0"
-        },
         "lrw": {
           "size": "13286",
           "refcount": "1"
@@ -437,9 +429,17 @@
           "size": "15139",
           "refcount": "1"
         },
+        "ac97_bus": {
+          "size": "12730",
+          "refcount": "1"
+        },
         "glue_helper": {
           "size": "13990",
           "refcount": "1"
+        },
+        "snd_pcm": {
+          "size": "105708",
+          "refcount": "2"
         },
         "ablk_helper": {
           "size": "13597",
@@ -449,6 +449,20 @@
           "size": "21190",
           "refcount": "3"
         },
+        "e1000": {
+          "size": "137586",
+          "refcount": "0",
+          "version": "7.3.21-k8-NAPI"
+        },
+        "sg": {
+          "size": "40721",
+          "refcount": "0",
+          "version": "3.5.36"
+        },
+        "pcspkr": {
+          "size": "12718",
+          "refcount": "0"
+        },
         "snd_timer": {
           "size": "29912",
           "refcount": "1"
@@ -457,39 +471,25 @@
           "size": "83815",
           "refcount": "4"
         },
-        "e1000": {
-          "size": "137586",
-          "refcount": "0",
-          "version": "7.3.21-k8-NAPI"
-        },
         "i2c_piix4": {
           "size": "22401",
-          "refcount": "0"
-        },
-        "pcspkr": {
-          "size": "12718",
           "refcount": "0"
         },
         "soundcore": {
           "size": "15047",
           "refcount": "1"
         },
-        "sg": {
-          "size": "40721",
-          "refcount": "0",
-          "version": "3.5.36"
-        },
         "parport_pc": {
           "size": "28205",
-          "refcount": "0"
-        },
-        "video": {
-          "size": "24538",
           "refcount": "0"
         },
         "parport": {
           "size": "46395",
           "refcount": "2"
+        },
+        "video": {
+          "size": "24538",
+          "refcount": "0"
         },
         "sunrpc": {
           "size": "353352",
@@ -546,14 +546,14 @@
           "refcount": "1",
           "version": "2.13"
         },
-        "serio_raw": {
-          "size": "13434",
-          "refcount": "0"
-        },
         "libata": {
           "size": "243133",
           "refcount": "3",
           "version": "3.00"
+        },
+        "serio_raw": {
+          "size": "13434",
+          "refcount": "0"
         }
       }
     },
@@ -570,12 +570,12 @@
       "by_device": {
         "/dev/sda1": {
           "kb_size": "41152736",
-          "kb_used": "3431532",
-          "kb_available": "35607720",
+          "kb_used": "3431548",
+          "kb_available": "35607704",
           "percent_used": "9%",
           "total_inodes": "2621440",
-          "inodes_used": "62618",
-          "inodes_available": "2558822",
+          "inodes_used": "62621",
+          "inodes_available": "2558819",
           "inodes_percent_used": "3%",
           "fs_type": "ext4",
           "mount_options": [
@@ -641,8 +641,8 @@
         },
         "home_shared": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -658,10 +658,10 @@
             "/home/shared"
           ]
         },
-        "v-csr-8d5bafe4b": {
+        "v-csr-5d22033e7": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -674,13 +674,13 @@
             "relatime"
           ],
           "mounts": [
-            "/tmp/vagrant-chef/eaa02954c9a15228482190d25df60314/roles"
+            "/tmp/vagrant-chef/4b9dba8c7a8235143751a775a4492156/roles"
           ]
         },
-        "v-csn-2ce610a69": {
+        "v-csn-e15cdf4d2": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -693,13 +693,13 @@
             "relatime"
           ],
           "mounts": [
-            "/tmp/vagrant-chef/8caf1bb3f137745a4c435b9c66e15087/nodes"
+            "/tmp/vagrant-chef/061d03e519649e70795f97892671acc1/nodes"
           ]
         },
-        "v-csc-9785dec32": {
+        "v-csc-e90c11c23": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -712,13 +712,13 @@
             "relatime"
           ],
           "mounts": [
-            "/tmp/vagrant-chef/7c6973a082bbe5b4b714d634ee5e5b23/cookbooks"
+            "/tmp/vagrant-chef/805726841168d588e7e6c0de64c88288/cookbooks"
           ]
         },
-        "v-csc-4011fa5e5": {
+        "v-csc-ebaa92d03": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -731,13 +731,13 @@
             "relatime"
           ],
           "mounts": [
-            "/tmp/vagrant-chef/1f7b79d073540126629ea4564221cee9/cookbooks"
+            "/tmp/vagrant-chef/10dd24453d6e8d586f05532c8b6d0ce7/cookbooks"
           ]
         },
-        "v-csc-2b55281ee": {
+        "v-csc-ebaccc354": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -750,13 +750,13 @@
             "relatime"
           ],
           "mounts": [
-            "/tmp/vagrant-chef/a755d7ef075b8615f73d08ac3d155278/cookbooks"
+            "/tmp/vagrant-chef/a91203165707fd0828ab802d994bf548/cookbooks"
           ]
         },
-        "v-csdb-6f898a097": {
+        "v-csdb-b9cfd595c": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -769,7 +769,7 @@
             "relatime"
           ],
           "mounts": [
-            "/tmp/vagrant-chef/2a463a0a50d9a18f3beb3cf072c67b24/data_bags"
+            "/tmp/vagrant-chef/fd8b7b8b37e9fc218bf2ac7848e02169/data_bags"
           ]
         },
         "sysfs": {
@@ -837,20 +837,20 @@
             "noexec",
             "relatime",
             "seclabel",
-            "blkio"
+            "perf_event"
           ],
           "mounts": [
             "/sys/fs/cgroup/systemd",
-            "/sys/fs/cgroup/hugetlb",
-            "/sys/fs/cgroup/memory",
             "/sys/fs/cgroup/cpu,cpuacct",
             "/sys/fs/cgroup/freezer",
-            "/sys/fs/cgroup/pids",
+            "/sys/fs/cgroup/memory",
             "/sys/fs/cgroup/net_cls,net_prio",
+            "/sys/fs/cgroup/hugetlb",
+            "/sys/fs/cgroup/pids",
+            "/sys/fs/cgroup/blkio",
             "/sys/fs/cgroup/devices",
-            "/sys/fs/cgroup/perf_event",
             "/sys/fs/cgroup/cpuset",
-            "/sys/fs/cgroup/blkio"
+            "/sys/fs/cgroup/perf_event"
           ]
         },
         "pstore": {
@@ -886,23 +886,6 @@
             "/sys/fs/selinux"
           ]
         },
-        "systemd-1": {
-          "fs_type": "autofs",
-          "mount_options": [
-            "rw",
-            "relatime",
-            "fd=24",
-            "pgrp=1",
-            "timeout=0",
-            "minproto=5",
-            "maxproto=5",
-            "direct",
-            "pipe_ino=12064"
-          ],
-          "mounts": [
-            "/proc/sys/fs/binfmt_misc"
-          ]
-        },
         "hugetlbfs": {
           "fs_type": "hugetlbfs",
           "mount_options": [
@@ -914,6 +897,33 @@
             "/dev/hugepages"
           ]
         },
+        "debugfs": {
+          "fs_type": "debugfs",
+          "mount_options": [
+            "rw",
+            "relatime"
+          ],
+          "mounts": [
+            "/sys/kernel/debug"
+          ]
+        },
+        "systemd-1": {
+          "fs_type": "autofs",
+          "mount_options": [
+            "rw",
+            "relatime",
+            "fd=31",
+            "pgrp=1",
+            "timeout=0",
+            "minproto=5",
+            "maxproto=5",
+            "direct",
+            "pipe_ino=12388"
+          ],
+          "mounts": [
+            "/proc/sys/fs/binfmt_misc"
+          ]
+        },
         "mqueue": {
           "fs_type": "mqueue",
           "mount_options": [
@@ -923,16 +933,6 @@
           ],
           "mounts": [
             "/dev/mqueue"
-          ]
-        },
-        "debugfs": {
-          "fs_type": "debugfs",
-          "mount_options": [
-            "rw",
-            "relatime"
-          ],
-          "mounts": [
-            "/sys/kernel/debug"
           ]
         },
         "sunrpc": {
@@ -963,12 +963,12 @@
       "by_mountpoint": {
         "/": {
           "kb_size": "41152736",
-          "kb_used": "3431532",
-          "kb_available": "35607720",
+          "kb_used": "3431548",
+          "kb_available": "35607704",
           "percent_used": "9%",
           "total_inodes": "2621440",
-          "inodes_used": "62618",
-          "inodes_available": "2558822",
+          "inodes_used": "62621",
+          "inodes_available": "2558819",
           "inodes_percent_used": "3%",
           "fs_type": "rootfs",
           "mount_options": [
@@ -1092,8 +1092,8 @@
         },
         "/home/shared": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -1109,10 +1109,10 @@
             "home_shared"
           ]
         },
-        "/tmp/vagrant-chef/eaa02954c9a15228482190d25df60314/roles": {
+        "/tmp/vagrant-chef/4b9dba8c7a8235143751a775a4492156/roles": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -1125,13 +1125,13 @@
             "relatime"
           ],
           "devices": [
-            "v-csr-8d5bafe4b"
+            "v-csr-5d22033e7"
           ]
         },
-        "/tmp/vagrant-chef/8caf1bb3f137745a4c435b9c66e15087/nodes": {
+        "/tmp/vagrant-chef/061d03e519649e70795f97892671acc1/nodes": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -1144,13 +1144,13 @@
             "relatime"
           ],
           "devices": [
-            "v-csn-2ce610a69"
+            "v-csn-e15cdf4d2"
           ]
         },
-        "/tmp/vagrant-chef/7c6973a082bbe5b4b714d634ee5e5b23/cookbooks": {
+        "/tmp/vagrant-chef/805726841168d588e7e6c0de64c88288/cookbooks": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -1163,13 +1163,13 @@
             "relatime"
           ],
           "devices": [
-            "v-csc-9785dec32"
+            "v-csc-e90c11c23"
           ]
         },
-        "/tmp/vagrant-chef/1f7b79d073540126629ea4564221cee9/cookbooks": {
+        "/tmp/vagrant-chef/10dd24453d6e8d586f05532c8b6d0ce7/cookbooks": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -1182,13 +1182,13 @@
             "relatime"
           ],
           "devices": [
-            "v-csc-4011fa5e5"
+            "v-csc-ebaa92d03"
           ]
         },
-        "/tmp/vagrant-chef/a755d7ef075b8615f73d08ac3d155278/cookbooks": {
+        "/tmp/vagrant-chef/a91203165707fd0828ab802d994bf548/cookbooks": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -1201,13 +1201,13 @@
             "relatime"
           ],
           "devices": [
-            "v-csc-2b55281ee"
+            "v-csc-ebaccc354"
           ]
         },
-        "/tmp/vagrant-chef/2a463a0a50d9a18f3beb3cf072c67b24/data_bags": {
+        "/tmp/vagrant-chef/fd8b7b8b37e9fc218bf2ac7848e02169/data_bags": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -1220,7 +1220,7 @@
             "relatime"
           ],
           "devices": [
-            "v-csdb-6f898a097"
+            "v-csdb-b9cfd595c"
           ]
         },
         "/sys": {
@@ -1309,36 +1309,6 @@
             "pstore"
           ]
         },
-        "/sys/fs/cgroup/hugetlb": {
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "hugetlb"
-          ],
-          "devices": [
-            "cgroup"
-          ]
-        },
-        "/sys/fs/cgroup/memory": {
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "memory"
-          ],
-          "devices": [
-            "cgroup"
-          ]
-        },
         "/sys/fs/cgroup/cpu,cpuacct": {
           "fs_type": "cgroup",
           "mount_options": [
@@ -1370,7 +1340,7 @@
             "cgroup"
           ]
         },
-        "/sys/fs/cgroup/pids": {
+        "/sys/fs/cgroup/memory": {
           "fs_type": "cgroup",
           "mount_options": [
             "rw",
@@ -1379,7 +1349,7 @@
             "noexec",
             "relatime",
             "seclabel",
-            "pids"
+            "memory"
           ],
           "devices": [
             "cgroup"
@@ -1401,6 +1371,51 @@
             "cgroup"
           ]
         },
+        "/sys/fs/cgroup/hugetlb": {
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "hugetlb"
+          ],
+          "devices": [
+            "cgroup"
+          ]
+        },
+        "/sys/fs/cgroup/pids": {
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "pids"
+          ],
+          "devices": [
+            "cgroup"
+          ]
+        },
+        "/sys/fs/cgroup/blkio": {
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "blkio"
+          ],
+          "devices": [
+            "cgroup"
+          ]
+        },
         "/sys/fs/cgroup/devices": {
           "fs_type": "cgroup",
           "mount_options": [
@@ -1411,21 +1426,6 @@
             "relatime",
             "seclabel",
             "devices"
-          ],
-          "devices": [
-            "cgroup"
-          ]
-        },
-        "/sys/fs/cgroup/perf_event": {
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "perf_event"
           ],
           "devices": [
             "cgroup"
@@ -1446,7 +1446,7 @@
             "cgroup"
           ]
         },
-        "/sys/fs/cgroup/blkio": {
+        "/sys/fs/cgroup/perf_event": {
           "fs_type": "cgroup",
           "mount_options": [
             "rw",
@@ -1455,7 +1455,7 @@
             "noexec",
             "relatime",
             "seclabel",
-            "blkio"
+            "perf_event"
           ],
           "devices": [
             "cgroup"
@@ -1481,23 +1481,6 @@
             "selinuxfs"
           ]
         },
-        "/proc/sys/fs/binfmt_misc": {
-          "fs_type": "autofs",
-          "mount_options": [
-            "rw",
-            "relatime",
-            "fd=24",
-            "pgrp=1",
-            "timeout=0",
-            "minproto=5",
-            "maxproto=5",
-            "direct",
-            "pipe_ino=12064"
-          ],
-          "devices": [
-            "systemd-1"
-          ]
-        },
         "/dev/hugepages": {
           "fs_type": "hugetlbfs",
           "mount_options": [
@@ -1509,6 +1492,33 @@
             "hugetlbfs"
           ]
         },
+        "/sys/kernel/debug": {
+          "fs_type": "debugfs",
+          "mount_options": [
+            "rw",
+            "relatime"
+          ],
+          "devices": [
+            "debugfs"
+          ]
+        },
+        "/proc/sys/fs/binfmt_misc": {
+          "fs_type": "autofs",
+          "mount_options": [
+            "rw",
+            "relatime",
+            "fd=31",
+            "pgrp=1",
+            "timeout=0",
+            "minproto=5",
+            "maxproto=5",
+            "direct",
+            "pipe_ino=12388"
+          ],
+          "devices": [
+            "systemd-1"
+          ]
+        },
         "/dev/mqueue": {
           "fs_type": "mqueue",
           "mount_options": [
@@ -1518,16 +1528,6 @@
           ],
           "devices": [
             "mqueue"
-          ]
-        },
-        "/sys/kernel/debug": {
-          "fs_type": "debugfs",
-          "mount_options": [
-            "rw",
-            "relatime"
-          ],
-          "devices": [
-            "debugfs"
           ]
         },
         "/var/lib/nfs/rpc_pipefs": {
@@ -1545,13 +1545,13 @@
         "/dev/sda1,/": {
           "device": "/dev/sda1",
           "kb_size": "41152736",
-          "kb_used": "3431532",
-          "kb_available": "35607720",
+          "kb_used": "3431548",
+          "kb_available": "35607704",
           "percent_used": "9%",
           "mount": "/",
           "total_inodes": "2621440",
-          "inodes_used": "62618",
-          "inodes_available": "2558822",
+          "inodes_used": "62621",
+          "inodes_available": "2558819",
           "inodes_percent_used": "3%",
           "fs_type": "ext4",
           "mount_options": [
@@ -1670,8 +1670,8 @@
         "home_shared,/home/shared": {
           "device": "home_shared",
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "mount": "/home/shared",
           "total_inodes": "1000",
@@ -1685,13 +1685,13 @@
             "relatime"
           ]
         },
-        "v-csr-8d5bafe4b,/tmp/vagrant-chef/eaa02954c9a15228482190d25df60314/roles": {
-          "device": "v-csr-8d5bafe4b",
+        "v-csr-5d22033e7,/tmp/vagrant-chef/4b9dba8c7a8235143751a775a4492156/roles": {
+          "device": "v-csr-5d22033e7",
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
-          "mount": "/tmp/vagrant-chef/eaa02954c9a15228482190d25df60314/roles",
+          "mount": "/tmp/vagrant-chef/4b9dba8c7a8235143751a775a4492156/roles",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -1703,13 +1703,13 @@
             "relatime"
           ]
         },
-        "v-csn-2ce610a69,/tmp/vagrant-chef/8caf1bb3f137745a4c435b9c66e15087/nodes": {
-          "device": "v-csn-2ce610a69",
+        "v-csn-e15cdf4d2,/tmp/vagrant-chef/061d03e519649e70795f97892671acc1/nodes": {
+          "device": "v-csn-e15cdf4d2",
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
-          "mount": "/tmp/vagrant-chef/8caf1bb3f137745a4c435b9c66e15087/nodes",
+          "mount": "/tmp/vagrant-chef/061d03e519649e70795f97892671acc1/nodes",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -1721,13 +1721,13 @@
             "relatime"
           ]
         },
-        "v-csc-9785dec32,/tmp/vagrant-chef/7c6973a082bbe5b4b714d634ee5e5b23/cookbooks": {
-          "device": "v-csc-9785dec32",
+        "v-csc-e90c11c23,/tmp/vagrant-chef/805726841168d588e7e6c0de64c88288/cookbooks": {
+          "device": "v-csc-e90c11c23",
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
-          "mount": "/tmp/vagrant-chef/7c6973a082bbe5b4b714d634ee5e5b23/cookbooks",
+          "mount": "/tmp/vagrant-chef/805726841168d588e7e6c0de64c88288/cookbooks",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -1739,13 +1739,13 @@
             "relatime"
           ]
         },
-        "v-csc-4011fa5e5,/tmp/vagrant-chef/1f7b79d073540126629ea4564221cee9/cookbooks": {
-          "device": "v-csc-4011fa5e5",
+        "v-csc-ebaa92d03,/tmp/vagrant-chef/10dd24453d6e8d586f05532c8b6d0ce7/cookbooks": {
+          "device": "v-csc-ebaa92d03",
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
-          "mount": "/tmp/vagrant-chef/1f7b79d073540126629ea4564221cee9/cookbooks",
+          "mount": "/tmp/vagrant-chef/10dd24453d6e8d586f05532c8b6d0ce7/cookbooks",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -1757,13 +1757,13 @@
             "relatime"
           ]
         },
-        "v-csc-2b55281ee,/tmp/vagrant-chef/a755d7ef075b8615f73d08ac3d155278/cookbooks": {
-          "device": "v-csc-2b55281ee",
+        "v-csc-ebaccc354,/tmp/vagrant-chef/a91203165707fd0828ab802d994bf548/cookbooks": {
+          "device": "v-csc-ebaccc354",
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
-          "mount": "/tmp/vagrant-chef/a755d7ef075b8615f73d08ac3d155278/cookbooks",
+          "mount": "/tmp/vagrant-chef/a91203165707fd0828ab802d994bf548/cookbooks",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -1775,13 +1775,13 @@
             "relatime"
           ]
         },
-        "v-csdb-6f898a097,/tmp/vagrant-chef/2a463a0a50d9a18f3beb3cf072c67b24/data_bags": {
-          "device": "v-csdb-6f898a097",
+        "v-csdb-b9cfd595c,/tmp/vagrant-chef/fd8b7b8b37e9fc218bf2ac7848e02169/data_bags": {
+          "device": "v-csdb-b9cfd595c",
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
-          "mount": "/tmp/vagrant-chef/2a463a0a50d9a18f3beb3cf072c67b24/data_bags",
+          "mount": "/tmp/vagrant-chef/fd8b7b8b37e9fc218bf2ac7848e02169/data_bags",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -1873,34 +1873,6 @@
             "relatime"
           ]
         },
-        "cgroup,/sys/fs/cgroup/hugetlb": {
-          "device": "cgroup",
-          "mount": "/sys/fs/cgroup/hugetlb",
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "hugetlb"
-          ]
-        },
-        "cgroup,/sys/fs/cgroup/memory": {
-          "device": "cgroup",
-          "mount": "/sys/fs/cgroup/memory",
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "memory"
-          ]
-        },
         "cgroup,/sys/fs/cgroup/cpu,cpuacct": {
           "device": "cgroup",
           "mount": "/sys/fs/cgroup/cpu,cpuacct",
@@ -1930,9 +1902,9 @@
             "freezer"
           ]
         },
-        "cgroup,/sys/fs/cgroup/pids": {
+        "cgroup,/sys/fs/cgroup/memory": {
           "device": "cgroup",
-          "mount": "/sys/fs/cgroup/pids",
+          "mount": "/sys/fs/cgroup/memory",
           "fs_type": "cgroup",
           "mount_options": [
             "rw",
@@ -1941,7 +1913,7 @@
             "noexec",
             "relatime",
             "seclabel",
-            "pids"
+            "memory"
           ]
         },
         "cgroup,/sys/fs/cgroup/net_cls,net_prio": {
@@ -1959,6 +1931,48 @@
             "net_cls"
           ]
         },
+        "cgroup,/sys/fs/cgroup/hugetlb": {
+          "device": "cgroup",
+          "mount": "/sys/fs/cgroup/hugetlb",
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "hugetlb"
+          ]
+        },
+        "cgroup,/sys/fs/cgroup/pids": {
+          "device": "cgroup",
+          "mount": "/sys/fs/cgroup/pids",
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "pids"
+          ]
+        },
+        "cgroup,/sys/fs/cgroup/blkio": {
+          "device": "cgroup",
+          "mount": "/sys/fs/cgroup/blkio",
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "blkio"
+          ]
+        },
         "cgroup,/sys/fs/cgroup/devices": {
           "device": "cgroup",
           "mount": "/sys/fs/cgroup/devices",
@@ -1971,20 +1985,6 @@
             "relatime",
             "seclabel",
             "devices"
-          ]
-        },
-        "cgroup,/sys/fs/cgroup/perf_event": {
-          "device": "cgroup",
-          "mount": "/sys/fs/cgroup/perf_event",
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "perf_event"
           ]
         },
         "cgroup,/sys/fs/cgroup/cpuset": {
@@ -2001,9 +2001,9 @@
             "cpuset"
           ]
         },
-        "cgroup,/sys/fs/cgroup/blkio": {
+        "cgroup,/sys/fs/cgroup/perf_event": {
           "device": "cgroup",
-          "mount": "/sys/fs/cgroup/blkio",
+          "mount": "/sys/fs/cgroup/perf_event",
           "fs_type": "cgroup",
           "mount_options": [
             "rw",
@@ -2012,7 +2012,7 @@
             "noexec",
             "relatime",
             "seclabel",
-            "blkio"
+            "perf_event"
           ]
         },
         "configfs,/sys/kernel/config": {
@@ -2033,36 +2033,10 @@
             "relatime"
           ]
         },
-        "systemd-1,/proc/sys/fs/binfmt_misc": {
-          "device": "systemd-1",
-          "mount": "/proc/sys/fs/binfmt_misc",
-          "fs_type": "autofs",
-          "mount_options": [
-            "rw",
-            "relatime",
-            "fd=24",
-            "pgrp=1",
-            "timeout=0",
-            "minproto=5",
-            "maxproto=5",
-            "direct",
-            "pipe_ino=12064"
-          ]
-        },
         "hugetlbfs,/dev/hugepages": {
           "device": "hugetlbfs",
           "mount": "/dev/hugepages",
           "fs_type": "hugetlbfs",
-          "mount_options": [
-            "rw",
-            "relatime",
-            "seclabel"
-          ]
-        },
-        "mqueue,/dev/mqueue": {
-          "device": "mqueue",
-          "mount": "/dev/mqueue",
-          "fs_type": "mqueue",
           "mount_options": [
             "rw",
             "relatime",
@@ -2076,6 +2050,32 @@
           "mount_options": [
             "rw",
             "relatime"
+          ]
+        },
+        "systemd-1,/proc/sys/fs/binfmt_misc": {
+          "device": "systemd-1",
+          "mount": "/proc/sys/fs/binfmt_misc",
+          "fs_type": "autofs",
+          "mount_options": [
+            "rw",
+            "relatime",
+            "fd=31",
+            "pgrp=1",
+            "timeout=0",
+            "minproto=5",
+            "maxproto=5",
+            "direct",
+            "pipe_ino=12388"
+          ]
+        },
+        "mqueue,/dev/mqueue": {
+          "device": "mqueue",
+          "mount": "/dev/mqueue",
+          "fs_type": "mqueue",
+          "mount_options": [
+            "rw",
+            "relatime",
+            "seclabel"
           ]
         },
         "sunrpc,/var/lib/nfs/rpc_pipefs": {
@@ -2104,12 +2104,12 @@
       "by_device": {
         "/dev/sda1": {
           "kb_size": "41152736",
-          "kb_used": "3431532",
-          "kb_available": "35607720",
+          "kb_used": "3431548",
+          "kb_available": "35607704",
           "percent_used": "9%",
           "total_inodes": "2621440",
-          "inodes_used": "62618",
-          "inodes_available": "2558822",
+          "inodes_used": "62621",
+          "inodes_available": "2558819",
           "inodes_percent_used": "3%",
           "fs_type": "ext4",
           "mount_options": [
@@ -2175,8 +2175,8 @@
         },
         "home_shared": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -2192,10 +2192,10 @@
             "/home/shared"
           ]
         },
-        "v-csr-8d5bafe4b": {
+        "v-csr-5d22033e7": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -2208,13 +2208,13 @@
             "relatime"
           ],
           "mounts": [
-            "/tmp/vagrant-chef/eaa02954c9a15228482190d25df60314/roles"
+            "/tmp/vagrant-chef/4b9dba8c7a8235143751a775a4492156/roles"
           ]
         },
-        "v-csn-2ce610a69": {
+        "v-csn-e15cdf4d2": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -2227,13 +2227,13 @@
             "relatime"
           ],
           "mounts": [
-            "/tmp/vagrant-chef/8caf1bb3f137745a4c435b9c66e15087/nodes"
+            "/tmp/vagrant-chef/061d03e519649e70795f97892671acc1/nodes"
           ]
         },
-        "v-csc-9785dec32": {
+        "v-csc-e90c11c23": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -2246,13 +2246,13 @@
             "relatime"
           ],
           "mounts": [
-            "/tmp/vagrant-chef/7c6973a082bbe5b4b714d634ee5e5b23/cookbooks"
+            "/tmp/vagrant-chef/805726841168d588e7e6c0de64c88288/cookbooks"
           ]
         },
-        "v-csc-4011fa5e5": {
+        "v-csc-ebaa92d03": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -2265,13 +2265,13 @@
             "relatime"
           ],
           "mounts": [
-            "/tmp/vagrant-chef/1f7b79d073540126629ea4564221cee9/cookbooks"
+            "/tmp/vagrant-chef/10dd24453d6e8d586f05532c8b6d0ce7/cookbooks"
           ]
         },
-        "v-csc-2b55281ee": {
+        "v-csc-ebaccc354": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -2284,13 +2284,13 @@
             "relatime"
           ],
           "mounts": [
-            "/tmp/vagrant-chef/a755d7ef075b8615f73d08ac3d155278/cookbooks"
+            "/tmp/vagrant-chef/a91203165707fd0828ab802d994bf548/cookbooks"
           ]
         },
-        "v-csdb-6f898a097": {
+        "v-csdb-b9cfd595c": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -2303,7 +2303,7 @@
             "relatime"
           ],
           "mounts": [
-            "/tmp/vagrant-chef/2a463a0a50d9a18f3beb3cf072c67b24/data_bags"
+            "/tmp/vagrant-chef/fd8b7b8b37e9fc218bf2ac7848e02169/data_bags"
           ]
         },
         "sysfs": {
@@ -2371,20 +2371,20 @@
             "noexec",
             "relatime",
             "seclabel",
-            "blkio"
+            "perf_event"
           ],
           "mounts": [
             "/sys/fs/cgroup/systemd",
-            "/sys/fs/cgroup/hugetlb",
-            "/sys/fs/cgroup/memory",
             "/sys/fs/cgroup/cpu,cpuacct",
             "/sys/fs/cgroup/freezer",
-            "/sys/fs/cgroup/pids",
+            "/sys/fs/cgroup/memory",
             "/sys/fs/cgroup/net_cls,net_prio",
+            "/sys/fs/cgroup/hugetlb",
+            "/sys/fs/cgroup/pids",
+            "/sys/fs/cgroup/blkio",
             "/sys/fs/cgroup/devices",
-            "/sys/fs/cgroup/perf_event",
             "/sys/fs/cgroup/cpuset",
-            "/sys/fs/cgroup/blkio"
+            "/sys/fs/cgroup/perf_event"
           ]
         },
         "pstore": {
@@ -2420,23 +2420,6 @@
             "/sys/fs/selinux"
           ]
         },
-        "systemd-1": {
-          "fs_type": "autofs",
-          "mount_options": [
-            "rw",
-            "relatime",
-            "fd=24",
-            "pgrp=1",
-            "timeout=0",
-            "minproto=5",
-            "maxproto=5",
-            "direct",
-            "pipe_ino=12064"
-          ],
-          "mounts": [
-            "/proc/sys/fs/binfmt_misc"
-          ]
-        },
         "hugetlbfs": {
           "fs_type": "hugetlbfs",
           "mount_options": [
@@ -2448,6 +2431,33 @@
             "/dev/hugepages"
           ]
         },
+        "debugfs": {
+          "fs_type": "debugfs",
+          "mount_options": [
+            "rw",
+            "relatime"
+          ],
+          "mounts": [
+            "/sys/kernel/debug"
+          ]
+        },
+        "systemd-1": {
+          "fs_type": "autofs",
+          "mount_options": [
+            "rw",
+            "relatime",
+            "fd=31",
+            "pgrp=1",
+            "timeout=0",
+            "minproto=5",
+            "maxproto=5",
+            "direct",
+            "pipe_ino=12388"
+          ],
+          "mounts": [
+            "/proc/sys/fs/binfmt_misc"
+          ]
+        },
         "mqueue": {
           "fs_type": "mqueue",
           "mount_options": [
@@ -2457,16 +2467,6 @@
           ],
           "mounts": [
             "/dev/mqueue"
-          ]
-        },
-        "debugfs": {
-          "fs_type": "debugfs",
-          "mount_options": [
-            "rw",
-            "relatime"
-          ],
-          "mounts": [
-            "/sys/kernel/debug"
           ]
         },
         "sunrpc": {
@@ -2497,12 +2497,12 @@
       "by_mountpoint": {
         "/": {
           "kb_size": "41152736",
-          "kb_used": "3431532",
-          "kb_available": "35607720",
+          "kb_used": "3431548",
+          "kb_available": "35607704",
           "percent_used": "9%",
           "total_inodes": "2621440",
-          "inodes_used": "62618",
-          "inodes_available": "2558822",
+          "inodes_used": "62621",
+          "inodes_available": "2558819",
           "inodes_percent_used": "3%",
           "fs_type": "rootfs",
           "mount_options": [
@@ -2626,8 +2626,8 @@
         },
         "/home/shared": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -2643,10 +2643,10 @@
             "home_shared"
           ]
         },
-        "/tmp/vagrant-chef/eaa02954c9a15228482190d25df60314/roles": {
+        "/tmp/vagrant-chef/4b9dba8c7a8235143751a775a4492156/roles": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -2659,13 +2659,13 @@
             "relatime"
           ],
           "devices": [
-            "v-csr-8d5bafe4b"
+            "v-csr-5d22033e7"
           ]
         },
-        "/tmp/vagrant-chef/8caf1bb3f137745a4c435b9c66e15087/nodes": {
+        "/tmp/vagrant-chef/061d03e519649e70795f97892671acc1/nodes": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -2678,13 +2678,13 @@
             "relatime"
           ],
           "devices": [
-            "v-csn-2ce610a69"
+            "v-csn-e15cdf4d2"
           ]
         },
-        "/tmp/vagrant-chef/7c6973a082bbe5b4b714d634ee5e5b23/cookbooks": {
+        "/tmp/vagrant-chef/805726841168d588e7e6c0de64c88288/cookbooks": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -2697,13 +2697,13 @@
             "relatime"
           ],
           "devices": [
-            "v-csc-9785dec32"
+            "v-csc-e90c11c23"
           ]
         },
-        "/tmp/vagrant-chef/1f7b79d073540126629ea4564221cee9/cookbooks": {
+        "/tmp/vagrant-chef/10dd24453d6e8d586f05532c8b6d0ce7/cookbooks": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -2716,13 +2716,13 @@
             "relatime"
           ],
           "devices": [
-            "v-csc-4011fa5e5"
+            "v-csc-ebaa92d03"
           ]
         },
-        "/tmp/vagrant-chef/a755d7ef075b8615f73d08ac3d155278/cookbooks": {
+        "/tmp/vagrant-chef/a91203165707fd0828ab802d994bf548/cookbooks": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -2735,13 +2735,13 @@
             "relatime"
           ],
           "devices": [
-            "v-csc-2b55281ee"
+            "v-csc-ebaccc354"
           ]
         },
-        "/tmp/vagrant-chef/2a463a0a50d9a18f3beb3cf072c67b24/data_bags": {
+        "/tmp/vagrant-chef/fd8b7b8b37e9fc218bf2ac7848e02169/data_bags": {
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -2754,7 +2754,7 @@
             "relatime"
           ],
           "devices": [
-            "v-csdb-6f898a097"
+            "v-csdb-b9cfd595c"
           ]
         },
         "/sys": {
@@ -2843,36 +2843,6 @@
             "pstore"
           ]
         },
-        "/sys/fs/cgroup/hugetlb": {
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "hugetlb"
-          ],
-          "devices": [
-            "cgroup"
-          ]
-        },
-        "/sys/fs/cgroup/memory": {
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "memory"
-          ],
-          "devices": [
-            "cgroup"
-          ]
-        },
         "/sys/fs/cgroup/cpu,cpuacct": {
           "fs_type": "cgroup",
           "mount_options": [
@@ -2904,7 +2874,7 @@
             "cgroup"
           ]
         },
-        "/sys/fs/cgroup/pids": {
+        "/sys/fs/cgroup/memory": {
           "fs_type": "cgroup",
           "mount_options": [
             "rw",
@@ -2913,7 +2883,7 @@
             "noexec",
             "relatime",
             "seclabel",
-            "pids"
+            "memory"
           ],
           "devices": [
             "cgroup"
@@ -2935,6 +2905,51 @@
             "cgroup"
           ]
         },
+        "/sys/fs/cgroup/hugetlb": {
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "hugetlb"
+          ],
+          "devices": [
+            "cgroup"
+          ]
+        },
+        "/sys/fs/cgroup/pids": {
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "pids"
+          ],
+          "devices": [
+            "cgroup"
+          ]
+        },
+        "/sys/fs/cgroup/blkio": {
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "blkio"
+          ],
+          "devices": [
+            "cgroup"
+          ]
+        },
         "/sys/fs/cgroup/devices": {
           "fs_type": "cgroup",
           "mount_options": [
@@ -2945,21 +2960,6 @@
             "relatime",
             "seclabel",
             "devices"
-          ],
-          "devices": [
-            "cgroup"
-          ]
-        },
-        "/sys/fs/cgroup/perf_event": {
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "perf_event"
           ],
           "devices": [
             "cgroup"
@@ -2980,7 +2980,7 @@
             "cgroup"
           ]
         },
-        "/sys/fs/cgroup/blkio": {
+        "/sys/fs/cgroup/perf_event": {
           "fs_type": "cgroup",
           "mount_options": [
             "rw",
@@ -2989,7 +2989,7 @@
             "noexec",
             "relatime",
             "seclabel",
-            "blkio"
+            "perf_event"
           ],
           "devices": [
             "cgroup"
@@ -3015,23 +3015,6 @@
             "selinuxfs"
           ]
         },
-        "/proc/sys/fs/binfmt_misc": {
-          "fs_type": "autofs",
-          "mount_options": [
-            "rw",
-            "relatime",
-            "fd=24",
-            "pgrp=1",
-            "timeout=0",
-            "minproto=5",
-            "maxproto=5",
-            "direct",
-            "pipe_ino=12064"
-          ],
-          "devices": [
-            "systemd-1"
-          ]
-        },
         "/dev/hugepages": {
           "fs_type": "hugetlbfs",
           "mount_options": [
@@ -3043,6 +3026,33 @@
             "hugetlbfs"
           ]
         },
+        "/sys/kernel/debug": {
+          "fs_type": "debugfs",
+          "mount_options": [
+            "rw",
+            "relatime"
+          ],
+          "devices": [
+            "debugfs"
+          ]
+        },
+        "/proc/sys/fs/binfmt_misc": {
+          "fs_type": "autofs",
+          "mount_options": [
+            "rw",
+            "relatime",
+            "fd=31",
+            "pgrp=1",
+            "timeout=0",
+            "minproto=5",
+            "maxproto=5",
+            "direct",
+            "pipe_ino=12388"
+          ],
+          "devices": [
+            "systemd-1"
+          ]
+        },
         "/dev/mqueue": {
           "fs_type": "mqueue",
           "mount_options": [
@@ -3052,16 +3062,6 @@
           ],
           "devices": [
             "mqueue"
-          ]
-        },
-        "/sys/kernel/debug": {
-          "fs_type": "debugfs",
-          "mount_options": [
-            "rw",
-            "relatime"
-          ],
-          "devices": [
-            "debugfs"
           ]
         },
         "/var/lib/nfs/rpc_pipefs": {
@@ -3079,13 +3079,13 @@
         "/dev/sda1,/": {
           "device": "/dev/sda1",
           "kb_size": "41152736",
-          "kb_used": "3431532",
-          "kb_available": "35607720",
+          "kb_used": "3431548",
+          "kb_available": "35607704",
           "percent_used": "9%",
           "mount": "/",
           "total_inodes": "2621440",
-          "inodes_used": "62618",
-          "inodes_available": "2558822",
+          "inodes_used": "62621",
+          "inodes_available": "2558819",
           "inodes_percent_used": "3%",
           "fs_type": "ext4",
           "mount_options": [
@@ -3204,8 +3204,8 @@
         "home_shared,/home/shared": {
           "device": "home_shared",
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
           "mount": "/home/shared",
           "total_inodes": "1000",
@@ -3219,13 +3219,13 @@
             "relatime"
           ]
         },
-        "v-csr-8d5bafe4b,/tmp/vagrant-chef/eaa02954c9a15228482190d25df60314/roles": {
-          "device": "v-csr-8d5bafe4b",
+        "v-csr-5d22033e7,/tmp/vagrant-chef/4b9dba8c7a8235143751a775a4492156/roles": {
+          "device": "v-csr-5d22033e7",
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
-          "mount": "/tmp/vagrant-chef/eaa02954c9a15228482190d25df60314/roles",
+          "mount": "/tmp/vagrant-chef/4b9dba8c7a8235143751a775a4492156/roles",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -3237,13 +3237,13 @@
             "relatime"
           ]
         },
-        "v-csn-2ce610a69,/tmp/vagrant-chef/8caf1bb3f137745a4c435b9c66e15087/nodes": {
-          "device": "v-csn-2ce610a69",
+        "v-csn-e15cdf4d2,/tmp/vagrant-chef/061d03e519649e70795f97892671acc1/nodes": {
+          "device": "v-csn-e15cdf4d2",
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
-          "mount": "/tmp/vagrant-chef/8caf1bb3f137745a4c435b9c66e15087/nodes",
+          "mount": "/tmp/vagrant-chef/061d03e519649e70795f97892671acc1/nodes",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -3255,13 +3255,13 @@
             "relatime"
           ]
         },
-        "v-csc-9785dec32,/tmp/vagrant-chef/7c6973a082bbe5b4b714d634ee5e5b23/cookbooks": {
-          "device": "v-csc-9785dec32",
+        "v-csc-e90c11c23,/tmp/vagrant-chef/805726841168d588e7e6c0de64c88288/cookbooks": {
+          "device": "v-csc-e90c11c23",
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
-          "mount": "/tmp/vagrant-chef/7c6973a082bbe5b4b714d634ee5e5b23/cookbooks",
+          "mount": "/tmp/vagrant-chef/805726841168d588e7e6c0de64c88288/cookbooks",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -3273,13 +3273,13 @@
             "relatime"
           ]
         },
-        "v-csc-4011fa5e5,/tmp/vagrant-chef/1f7b79d073540126629ea4564221cee9/cookbooks": {
-          "device": "v-csc-4011fa5e5",
+        "v-csc-ebaa92d03,/tmp/vagrant-chef/10dd24453d6e8d586f05532c8b6d0ce7/cookbooks": {
+          "device": "v-csc-ebaa92d03",
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
-          "mount": "/tmp/vagrant-chef/1f7b79d073540126629ea4564221cee9/cookbooks",
+          "mount": "/tmp/vagrant-chef/10dd24453d6e8d586f05532c8b6d0ce7/cookbooks",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -3291,13 +3291,13 @@
             "relatime"
           ]
         },
-        "v-csc-2b55281ee,/tmp/vagrant-chef/a755d7ef075b8615f73d08ac3d155278/cookbooks": {
-          "device": "v-csc-2b55281ee",
+        "v-csc-ebaccc354,/tmp/vagrant-chef/a91203165707fd0828ab802d994bf548/cookbooks": {
+          "device": "v-csc-ebaccc354",
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
-          "mount": "/tmp/vagrant-chef/a755d7ef075b8615f73d08ac3d155278/cookbooks",
+          "mount": "/tmp/vagrant-chef/a91203165707fd0828ab802d994bf548/cookbooks",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -3309,13 +3309,13 @@
             "relatime"
           ]
         },
-        "v-csdb-6f898a097,/tmp/vagrant-chef/2a463a0a50d9a18f3beb3cf072c67b24/data_bags": {
-          "device": "v-csdb-6f898a097",
+        "v-csdb-b9cfd595c,/tmp/vagrant-chef/fd8b7b8b37e9fc218bf2ac7848e02169/data_bags": {
+          "device": "v-csdb-b9cfd595c",
           "kb_size": "243993744",
-          "kb_used": "44424976",
-          "kb_available": "199568768",
+          "kb_used": "45600596",
+          "kb_available": "198393148",
           "percent_used": "19%",
-          "mount": "/tmp/vagrant-chef/2a463a0a50d9a18f3beb3cf072c67b24/data_bags",
+          "mount": "/tmp/vagrant-chef/fd8b7b8b37e9fc218bf2ac7848e02169/data_bags",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -3407,34 +3407,6 @@
             "relatime"
           ]
         },
-        "cgroup,/sys/fs/cgroup/hugetlb": {
-          "device": "cgroup",
-          "mount": "/sys/fs/cgroup/hugetlb",
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "hugetlb"
-          ]
-        },
-        "cgroup,/sys/fs/cgroup/memory": {
-          "device": "cgroup",
-          "mount": "/sys/fs/cgroup/memory",
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "memory"
-          ]
-        },
         "cgroup,/sys/fs/cgroup/cpu,cpuacct": {
           "device": "cgroup",
           "mount": "/sys/fs/cgroup/cpu,cpuacct",
@@ -3464,9 +3436,9 @@
             "freezer"
           ]
         },
-        "cgroup,/sys/fs/cgroup/pids": {
+        "cgroup,/sys/fs/cgroup/memory": {
           "device": "cgroup",
-          "mount": "/sys/fs/cgroup/pids",
+          "mount": "/sys/fs/cgroup/memory",
           "fs_type": "cgroup",
           "mount_options": [
             "rw",
@@ -3475,7 +3447,7 @@
             "noexec",
             "relatime",
             "seclabel",
-            "pids"
+            "memory"
           ]
         },
         "cgroup,/sys/fs/cgroup/net_cls,net_prio": {
@@ -3493,6 +3465,48 @@
             "net_cls"
           ]
         },
+        "cgroup,/sys/fs/cgroup/hugetlb": {
+          "device": "cgroup",
+          "mount": "/sys/fs/cgroup/hugetlb",
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "hugetlb"
+          ]
+        },
+        "cgroup,/sys/fs/cgroup/pids": {
+          "device": "cgroup",
+          "mount": "/sys/fs/cgroup/pids",
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "pids"
+          ]
+        },
+        "cgroup,/sys/fs/cgroup/blkio": {
+          "device": "cgroup",
+          "mount": "/sys/fs/cgroup/blkio",
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "blkio"
+          ]
+        },
         "cgroup,/sys/fs/cgroup/devices": {
           "device": "cgroup",
           "mount": "/sys/fs/cgroup/devices",
@@ -3505,20 +3519,6 @@
             "relatime",
             "seclabel",
             "devices"
-          ]
-        },
-        "cgroup,/sys/fs/cgroup/perf_event": {
-          "device": "cgroup",
-          "mount": "/sys/fs/cgroup/perf_event",
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "perf_event"
           ]
         },
         "cgroup,/sys/fs/cgroup/cpuset": {
@@ -3535,9 +3535,9 @@
             "cpuset"
           ]
         },
-        "cgroup,/sys/fs/cgroup/blkio": {
+        "cgroup,/sys/fs/cgroup/perf_event": {
           "device": "cgroup",
-          "mount": "/sys/fs/cgroup/blkio",
+          "mount": "/sys/fs/cgroup/perf_event",
           "fs_type": "cgroup",
           "mount_options": [
             "rw",
@@ -3546,7 +3546,7 @@
             "noexec",
             "relatime",
             "seclabel",
-            "blkio"
+            "perf_event"
           ]
         },
         "configfs,/sys/kernel/config": {
@@ -3567,36 +3567,10 @@
             "relatime"
           ]
         },
-        "systemd-1,/proc/sys/fs/binfmt_misc": {
-          "device": "systemd-1",
-          "mount": "/proc/sys/fs/binfmt_misc",
-          "fs_type": "autofs",
-          "mount_options": [
-            "rw",
-            "relatime",
-            "fd=24",
-            "pgrp=1",
-            "timeout=0",
-            "minproto=5",
-            "maxproto=5",
-            "direct",
-            "pipe_ino=12064"
-          ]
-        },
         "hugetlbfs,/dev/hugepages": {
           "device": "hugetlbfs",
           "mount": "/dev/hugepages",
           "fs_type": "hugetlbfs",
-          "mount_options": [
-            "rw",
-            "relatime",
-            "seclabel"
-          ]
-        },
-        "mqueue,/dev/mqueue": {
-          "device": "mqueue",
-          "mount": "/dev/mqueue",
-          "fs_type": "mqueue",
           "mount_options": [
             "rw",
             "relatime",
@@ -3610,6 +3584,32 @@
           "mount_options": [
             "rw",
             "relatime"
+          ]
+        },
+        "systemd-1,/proc/sys/fs/binfmt_misc": {
+          "device": "systemd-1",
+          "mount": "/proc/sys/fs/binfmt_misc",
+          "fs_type": "autofs",
+          "mount_options": [
+            "rw",
+            "relatime",
+            "fd=31",
+            "pgrp=1",
+            "timeout=0",
+            "minproto=5",
+            "maxproto=5",
+            "direct",
+            "pipe_ino=12388"
+          ]
+        },
+        "mqueue,/dev/mqueue": {
+          "device": "mqueue",
+          "mount": "/dev/mqueue",
+          "fs_type": "mqueue",
+          "mount_options": [
+            "rw",
+            "relatime",
+            "seclabel"
           ]
         },
         "sunrpc,/var/lib/nfs/rpc_pipefs": {
@@ -3647,24 +3647,24 @@
         "surplus": "0"
       },
       "total": "1882300kB",
-      "free": "801256kB",
-      "available": "1521776kB",
-      "buffers": "55120kB",
-      "cached": "754120kB",
-      "active": "513948kB",
-      "inactive": "411556kB",
-      "dirty": "109312kB",
-      "writeback": "4kB",
-      "anon_pages": "116252kB",
-      "mapped": "28224kB",
-      "slab": "126944kB",
-      "slab_reclaimable": "102256kB",
-      "slab_unreclaim": "24688kB",
-      "page_tables": "5004kB",
+      "free": "803376kB",
+      "available": "1523060kB",
+      "buffers": "55116kB",
+      "cached": "754144kB",
+      "active": "513936kB",
+      "inactive": "411552kB",
+      "dirty": "113304kB",
+      "writeback": "0kB",
+      "anon_pages": "116268kB",
+      "mapped": "28240kB",
+      "slab": "124832kB",
+      "slab_reclaimable": "100544kB",
+      "slab_unreclaim": "24288kB",
+      "page_tables": "4992kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "3038296kB",
-      "committed_as": "423836kB",
+      "committed_as": "423472kB",
       "vmalloc_total": "34359738367kB",
       "vmalloc_used": "10668kB",
       "vmalloc_chunk": "34359713788kB",
@@ -4224,10 +4224,10 @@
     "current_user": "root",
     "keys": {
       "ssh": {
-        "host_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDMfasEChLetLtpervMfsw9vSDqjO/fqeuGt5Ezp7zi23W91ZC9oXBR7aHrq1ra09RJ4e3ihJjkleFa11DpmuFUgWwwVaZNOLVfNOcmZd/USjVMxpGojSgj7FdGqI9hsA1Y9/lFH7eQMKy0Q7yRZZzVBJ8LKQmZ097+8GXvDX8faOFw0CkU5w/MkSzFcBvqik2ED9CsxUCZY09uyuLSNoZWqNHk4PEYerd9AiYBZWeWeyYxPQjqFMtF2G9DYou3xbwZ7xAINower9fG1CNoksGhqCAD7aHAivDyVb0eE1WsXxsYfQ0qo6vMSd0mgr4K4WqUv4drUXwRay2eVNp/4Oeb",
-        "host_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGjtFbDGIuKWM9O4wF3szT8ws0yYwzSo+IsfXVtSKQ8gIQbcbS/TsH3j46e89zjpNMqQC/loLzVpWY9IPnUQSz4=",
+        "host_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCsgJKuvTa0s00p8a3kE9gEBWiu1EV7TjOEtKsbVEhzoCUjvfJOjg+7ZRVWkaxzdEjVt9TiXpP4N2kTP4IrIPQwNobyN+CvuZu3SnTVgbnDm7LY1Ut+/vBB8c6RIkQX3M/l0rvLB0qd1iBW6lSUfX61NLZaTq4W+cV7GG/3wTtAfa+OMUz21BOQKYw52stZCG5KNczg//geZkB2dfApLh0/7UnPPQ6rLbOh756qBDQn7u5tqg+/dl1wp7gYRhsv99wUdzoYoRmNC+V6RD6MRQrqWZR3fYhYQylh+kaV5Mylafqi6M0J7HtAK6RAOkfEjOBOPyoj+jNGdtnvvzqcyZk/",
+        "host_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGKBmwPXhdEOoAmTn7Jai9NSfPwIT5uUUdExRfeFIhtLG4QvpEKKnbd89Ho9wa9HCPnoN/WcPozxXcxIqoZwV08=",
         "host_ecdsa_type": "ecdsa-sha2-nistp256",
-        "host_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIMCcvio8oexuxvkNNZTCs90rOAVXnUbNfmZWztw6cJuY"
+        "host_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIMvygWmuRnk5jVHQeGJ9BGZYCT4fqFY6j6pI7v6LfOJS"
       }
     },
     "block_device": {
@@ -4424,19 +4424,19 @@
       "static_hostname": "laba",
       "icon_name": "computer-vm",
       "chassis": "vm",
-      "machine_id": "58436ce916f44e94abff9b0e4f664098",
-      "boot_id": "fd80bad836db442689a587e6aebae055",
+      "machine_id": "12e18732f8de44a6852b2ea88d354e08",
+      "boot_id": "81545fff25f346cfb40d3b9ca99b7eff",
       "virtualization": "kvm",
       "operating_system": "CentOS Linux 7 (Core)",
       "cpe_os_name": "cpe",
       "kernel": "Linux 3.10.0-957.1.3.el7.x86_64",
       "architecture": "x86-64"
     },
-    "machine_id": "58436ce916f44e94abff9b0e4f664098",
-    "uptime_seconds": 178,
-    "uptime": "2 minutes 58 seconds",
-    "idletime_seconds": 32,
-    "idletime": "32 seconds",
+    "machine_id": "12e18732f8de44a6852b2ea88d354e08",
+    "uptime_seconds": 179,
+    "uptime": "2 minutes 59 seconds",
+    "idletime_seconds": 31,
+    "idletime": "31 seconds",
     "cloud_v2": null,
     "cloud": null,
     "packages": {
@@ -4864,7 +4864,7 @@
         "epoch": "0",
         "version": "f4a80eb5",
         "release": "53a7ff4b",
-        "installdate": "1547110643",
+        "installdate": "1547131988",
         "arch": "(none)"
       },
       "sqlite": {
@@ -4878,7 +4878,7 @@
         "epoch": "0",
         "version": "1.0.1",
         "release": "3.el7",
-        "installdate": "1547110647",
+        "installdate": "1547131995",
         "arch": "x86_64"
       },
       "lua": {
@@ -4892,7 +4892,7 @@
         "epoch": "1",
         "version": "0.225",
         "release": "244.el7",
-        "installdate": "1547110648",
+        "installdate": "1547131996",
         "arch": "noarch"
       },
       "glib2": {
@@ -4906,7 +4906,7 @@
         "epoch": "0",
         "version": "2.5.1",
         "release": "3.el7",
-        "installdate": "1547110648",
+        "installdate": "1547131996",
         "arch": "noarch"
       },
       "gzip": {
@@ -4920,7 +4920,7 @@
         "epoch": "1",
         "version": "1.04",
         "release": "293.el7",
-        "installdate": "1547110648",
+        "installdate": "1547131996",
         "arch": "noarch"
       },
       "diffutils": {
@@ -4934,7 +4934,7 @@
         "epoch": "0",
         "version": "3.29",
         "release": "4.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131996",
         "arch": "noarch"
       },
       "expat": {
@@ -4948,7 +4948,7 @@
         "epoch": "0",
         "version": "1.87",
         "release": "4.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131996",
         "arch": "x86_64"
       },
       "libxslt": {
@@ -4962,7 +4962,7 @@
         "epoch": "0",
         "version": "5.68",
         "release": "3.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131997",
         "arch": "noarch"
       },
       "file-libs": {
@@ -4976,7 +4976,7 @@
         "epoch": "0",
         "version": "1.26",
         "release": "244.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131997",
         "arch": "noarch"
       },
       "libtool-ltdl": {
@@ -4990,7 +4990,7 @@
         "epoch": "0",
         "version": "1.2300",
         "release": "2.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131997",
         "arch": "noarch"
       },
       "pciutils-libs": {
@@ -5004,7 +5004,7 @@
         "epoch": "4",
         "version": "1.9725",
         "release": "3.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131997",
         "arch": "x86_64"
       },
       "xmlsec1": {
@@ -5018,7 +5018,7 @@
         "epoch": "0",
         "version": "3.40",
         "release": "5.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131997",
         "arch": "x86_64"
       },
       "pam": {
@@ -5032,7 +5032,7 @@
         "epoch": "1",
         "version": "3.28",
         "release": "4.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131997",
         "arch": "noarch"
       },
       "libnl3-cli": {
@@ -5046,7 +5046,7 @@
         "epoch": "0",
         "version": "2.09",
         "release": "2.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131997",
         "arch": "noarch"
       },
       "libcroco": {
@@ -5060,7 +5060,7 @@
         "epoch": "4",
         "version": "5.16.3",
         "release": "293.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131997",
         "arch": "x86_64"
       },
       "nss-softokn": {
@@ -5074,7 +5074,7 @@
         "epoch": "4",
         "version": "5.16.3",
         "release": "293.el7",
-        "installdate": "1547110651",
+        "installdate": "1547131999",
         "arch": "x86_64"
       },
       "nss": {
@@ -5088,7 +5088,7 @@
         "epoch": "0",
         "version": "2.17",
         "release": "260.el7",
-        "installdate": "1547110652",
+        "installdate": "1547132000",
         "arch": "x86_64"
       },
       "libassuan": {
@@ -5102,7 +5102,7 @@
         "epoch": "0",
         "version": "4.8.5",
         "release": "36.el7",
-        "installdate": "1547110655",
+        "installdate": "1547132002",
         "arch": "x86_64"
       },
       "kmod-libs": {
@@ -5116,7 +5116,7 @@
         "epoch": "0",
         "version": "7",
         "release": "11",
-        "installdate": "1547110765",
+        "installdate": "1547132116",
         "arch": "noarch"
       },
       "libtirpc": {
@@ -6110,7 +6110,7 @@
         "epoch": "0",
         "version": "3.1.1",
         "release": "4.el7",
-        "installdate": "1547110647",
+        "installdate": "1547131995",
         "arch": "x86_64"
       },
       "libtalloc": {
@@ -6124,7 +6124,7 @@
         "epoch": "0",
         "version": "4.8.5",
         "release": "36.el7",
-        "installdate": "1547110648",
+        "installdate": "1547131996",
         "arch": "x86_64"
       },
       "libmount": {
@@ -6138,7 +6138,7 @@
         "epoch": "0",
         "version": "0.033",
         "release": "3.el7",
-        "installdate": "1547110648",
+        "installdate": "1547131996",
         "arch": "noarch"
       },
       "shared-mime-info": {
@@ -6152,7 +6152,7 @@
         "epoch": "0",
         "version": "3.20",
         "release": "4.el7",
-        "installdate": "1547110648",
+        "installdate": "1547131996",
         "arch": "noarch"
       },
       "cpio": {
@@ -6166,7 +6166,7 @@
         "epoch": "0",
         "version": "2.51",
         "release": "7.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131996",
         "arch": "x86_64"
       },
       "libnl3": {
@@ -6180,7 +6180,7 @@
         "epoch": "0",
         "version": "1.63",
         "release": "3.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131996",
         "arch": "noarch"
       },
       "cracklib": {
@@ -6194,7 +6194,7 @@
         "epoch": "0",
         "version": "2.45",
         "release": "3.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131997",
         "arch": "x86_64"
       },
       "findutils": {
@@ -6208,7 +6208,7 @@
         "epoch": "0",
         "version": "1.27",
         "release": "2.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131997",
         "arch": "noarch"
       },
       "file": {
@@ -6222,7 +6222,7 @@
         "epoch": "4",
         "version": "5.16.3",
         "release": "293.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131997",
         "arch": "x86_64"
       },
       "libmnl": {
@@ -6236,7 +6236,7 @@
         "epoch": "0",
         "version": "2.010",
         "release": "4.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131997",
         "arch": "x86_64"
       },
       "libtdb": {
@@ -6250,7 +6250,7 @@
         "epoch": "0",
         "version": "1.43",
         "release": "6.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131997",
         "arch": "x86_64"
       },
       "cracklib-dicts": {
@@ -6264,7 +6264,7 @@
         "epoch": "0",
         "version": "1.27",
         "release": "248.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131997",
         "arch": "x86_64"
       },
       "libpwquality": {
@@ -6278,7 +6278,7 @@
         "epoch": "0",
         "version": "0.23.01",
         "release": "3.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131997",
         "arch": "noarch"
       },
       "pkgconfig": {
@@ -6292,7 +6292,7 @@
         "epoch": "0",
         "version": "1.49",
         "release": "3.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131997",
         "arch": "x86_64"
       },
       "libtevent": {
@@ -6306,7 +6306,7 @@
         "epoch": "0",
         "version": "2.40",
         "release": "3.el7",
-        "installdate": "1547110649",
+        "installdate": "1547131997",
         "arch": "noarch"
       },
       "nss-pem": {
@@ -6320,7 +6320,7 @@
         "epoch": "0",
         "version": "3.10.0",
         "release": "957.1.3.el7",
-        "installdate": "1547110652",
+        "installdate": "1547132000",
         "arch": "x86_64"
       },
       "nss-sysinit": {
@@ -6334,7 +6334,7 @@
         "epoch": "0",
         "version": "2.17",
         "release": "260.el7",
-        "installdate": "1547110653",
+        "installdate": "1547132000",
         "arch": "x86_64"
       },
       "cyrus-sasl-lib": {
@@ -6348,7 +6348,7 @@
         "epoch": "0",
         "version": "3.10.0",
         "release": "957.1.3.el7",
-        "installdate": "1547110663",
+        "installdate": "1547132013",
         "arch": "x86_64"
       },
       "xz": {
@@ -6362,7 +6362,7 @@
         "epoch": "0",
         "version": "13.12.3",
         "release": "1.el7",
-        "installdate": "1547110792",
+        "installdate": "1547132139",
         "arch": "x86_64"
       },
       "libevent": {
@@ -6920,11 +6920,11 @@
       }
     },
     "root_group": "root",
-    "shard_seed": 114971557,
+    "shard_seed": 2265747,
     "command": {
       "ps": "ps -ef"
     },
-    "ohai_time": 1547110798.4480762,
+    "ohai_time": 1547132144.5580962,
     "init_package": "systemd",
     "sysconf": {
       "LINK_MAX": 65000,
@@ -6990,7 +6990,7 @@
       "ULONG_MAX": 18446744073709551615,
       "USHRT_MAX": 65535,
       "WORD_BIT": 32,
-      "_AVPHYS_PAGES": 199024,
+      "_AVPHYS_PAGES": 199524,
       "_NPROCESSORS_CONF": 1,
       "_NPROCESSORS_ONLN": 1,
       "_PHYS_PAGES": 470575,
