@@ -17,7 +17,7 @@ pipeline {
                 sh 'berks install'
 
                 // Create VM (when the job will finish VM will be dead!!!)
-                sh 'vagrant up'
+                sh 'vagrant up --provision'
             }
         }
         stage ('Build') {
