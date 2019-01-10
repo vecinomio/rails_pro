@@ -34,8 +34,7 @@ pipeline {
         stage ('Deploy') {
             steps {
                 echo 'Deploy something'
-                githubNotify account: 'vecinomio', context: 'jenkins2-test', credentialsId: 'cf908719-307d-4663-b24e-1e09f1808c12', description: 'some description from Igor', gitApiUrl: '', repo: 'rails_pro', sha: '803b7f8102ee0b03333b94830ccf36a6320c26ed', status: 'SUCCESS', targetUrl: ''
-            }
+                githubNotify account: 'vecinomio', context: 'jenkins-test', description: 'some description from Igor', gitApiUrl: '', repo: 'rails_pro', sha: 'b9d690be7409864a8504ec6f7b68dc1488235880', status: 'SUCCESS', targetUrl: ''            }
         }
 
     }
