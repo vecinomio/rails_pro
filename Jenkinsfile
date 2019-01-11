@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    triggers {
-        pollSCM '* * * * *'
-    }
+    //triggers {
+        //pollSCM '* * * * *'
+    //}
 
     stages {
         //stage ('Checkout') {
@@ -34,7 +34,6 @@ pipeline {
         stage ('Deploy') {
             steps {
                 echo 'Deploy something'
-                
             }
         }
 
