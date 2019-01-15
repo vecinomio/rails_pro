@@ -2,3 +2,4 @@
 .vagrant
 site-cookbooks/main/.delivery
 *.log
+nodes/*.json
