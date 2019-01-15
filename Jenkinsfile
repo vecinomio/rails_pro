@@ -13,6 +13,7 @@ pipeline {
         //}
         stage ('creating vm') {
             steps {
+                sh 'echo $USER'
 
                 sh 'berks install'
 
