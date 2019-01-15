@@ -1,8 +1,6 @@
 require 'rails_helper'
 
-#Hello from spec test
-#ljdhfkjsdkdjnjkldnjk
-#jljljkjkjkjkj
+#Hello
 
 
 RSpec.describe StatsController, type: :controller do
