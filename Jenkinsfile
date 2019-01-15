@@ -14,10 +14,10 @@ pipeline {
         stage ('creating vm') {
             steps {
 
-                sh 'berks install'
+                sh 'sudo berks install'
 
                 // Create VM (when the job will finish VM will be dead!!!)
-                sh 'vagrant up --provision'
+                sh 'sudo vagrant up --provision'
             }
         }
         stage ('Build') {
@@ -28,7 +28,7 @@ pipeline {
         stage ('Tests') {
             steps {
                 echo 'Trying some tests'
-                sh 'vagrant provision --provision-with rspec'
+                sh 'sudo vagrant provision --provision-with rspec'
             }
         }
         stage ('Deploy') {
