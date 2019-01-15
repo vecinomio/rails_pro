@@ -14,7 +14,7 @@ pipeline {
         stage ('creating vm') {
             steps {
 
-                sh 'sudo berks install'
+                sh 'berks install'
 
                 // Create VM (when the job will finish VM will be dead!!!)
                 sh 'sudo vagrant up --provision'
