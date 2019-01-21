@@ -43,5 +43,6 @@ pipeline {
                     //sh 'gcloud compute instances stop cnt7 --zone=europe-west3-c'
                 //}
         //}
+    }
 
 }
