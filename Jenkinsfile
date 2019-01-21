@@ -29,11 +29,9 @@ pipeline {
         stage ('Tests') {
             agent { label 'cnt7' }
                 steps {
-                    script {
-                        try {
-                            //sh 'vagrant provision --provision-with rspec' // Used with vagrant VM on local machine
-                            sh 'cd /home/makienko_ig/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
-                        } catch (err) { echo err }
+                    catchError {
+                        //sh 'vagrant provision --provision-with rspec' // Used with vagrant VM on local machine
+                        sh 'cd /home/makienko_ig/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
                     }
                     echo currentBuild.result
                     sh 'poweroff'
