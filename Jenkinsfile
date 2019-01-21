@@ -1,6 +1,5 @@
 pipeline {
     agent none
-    def build_ok = true
 
     stages {
         //stage ('Checkout') { //Used only with pipeline script, not with declarative pipeline
@@ -27,32 +26,22 @@ pipeline {
                     sh 'gcloud compute instances start cnt7 --zone=europe-west3-c'
                 }
         }
-        try {
-            stage ('Tests') {
-                agent { label 'cnt7' }
-                    steps {
-                        echo 'Trying some RSpec tests'
-                        //sh 'vagrant provision --provision-with rspec' // Used with vagrant VM on local machine
-                        sh 'cd /home/makienko_ig/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
-                    }
-            }
-        } catch(e) {
-            build_ok = false
-            echo e.toString()
-        }
-        stage ('Turn off cnt7 instance') {
-            agent { label 'master' }
-            options { skipDefaultCheckout() }
+        stage ('Tests') {
+            agent { label 'cnt7' }
                 steps {
-                    echo 'Stoping instance'
-                    sh 'gcloud compute instances stop cnt7 --zone=europe-west3-c'
+                    echo 'Trying some RSpec tests'
+                    //sh 'vagrant provision --provision-with rspec' // Used with vagrant VM on local machine
+                    sh 'cd /home/makienko_ig/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec && poweroff' //Used with cloud instance
                 }
         }
 
-    }
-    if(build_ok) {
-        currentBuild.result = "SUCCESS"
-    } else {
-        currentBuild.result = "FAILURE"
-    }
+        //stage ('Turn off cnt7 instance') {
+            //agent { label 'master' }
+            //options { skipDefaultCheckout() }
+                //steps {
+                    //echo 'Stoping instance'
+                    //sh 'gcloud compute instances stop cnt7 --zone=europe-west3-c'
+                //}
+        //}
+
 }
