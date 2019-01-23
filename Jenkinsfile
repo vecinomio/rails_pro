@@ -34,7 +34,6 @@ pipeline {
                         sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
                     }
                     echo currentBuild.result
-                    //sh 'sudo poweroff'
                 }
         }
 
