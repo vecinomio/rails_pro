@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
 
     stages {
         //stage ('Checkout') { //Used only with pipeline script, not with declarative pipeline
@@ -19,7 +19,7 @@ pipeline {
             //}
         //}
         stage ('Turn on cnt7 instance') {
-            //agent { label 'master' }
+            agent { label 'master' }
             options { skipDefaultCheckout() }
                 steps {
                     echo 'Starting instance'
@@ -27,25 +27,25 @@ pipeline {
                 }
         }
         stage ('Tests') {
-            //agent { label 'cnt7' }
+            agent { label 'cnt7' }
                 steps {
                     catchError {
                         //sh 'vagrant provision --provision-with rspec' // Used with vagrant VM on local machine
-                        sh 'ssh makienko_ig@10.156.0.8 "cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec"' //Used with cloud instance
+                        sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
                     }
                     echo currentBuild.result
-                    sh 'gcloud compute instances stop cnt7 --zone=europe-west3-c'
+                    //sh 'sudo poweroff'
                 }
         }
 
-        //stage ('Turn off cnt7 instance') {
-            //agent { label 'master' }
-            //options { skipDefaultCheckout() }
-                //steps {
-                    //echo 'Stoping instance'
-                    //sh 'gcloud compute instances stop cnt7 --zone=europe-west3-c'
-                //}
-        //}
+        stage ('Turn off cnt7 instance') {
+            agent { label 'master' }
+            options { skipDefaultCheckout() }
+                steps {
+                    echo 'Stoping instance'
+                    sh 'gcloud compute instances stop cnt7 --zone=europe-west3-c'
+                }
+        }
     }
 
 }
