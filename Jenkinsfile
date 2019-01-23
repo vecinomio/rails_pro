@@ -20,7 +20,7 @@ pipeline {
         //}
         stage ('Turn on cnt7 instance') {
             //agent { label 'master' }
-            //options { skipDefaultCheckout() }
+            options { skipDefaultCheckout() }
                 steps {
                     echo 'Starting instance'
                     sh 'gcloud compute instances start cnt7 --zone=europe-west3-c'
