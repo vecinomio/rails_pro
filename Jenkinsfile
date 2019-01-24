@@ -26,12 +26,21 @@ pipeline {
                     sh 'gcloud compute instances start cnt7 --zone=europe-west3-c'
                 }
         }
-        stage ('Tests') {
+        stage ('RSpec tests') {
             agent { label 'cnt7' }
                 steps {
                     catchError {
                         //sh 'vagrant provision --provision-with rspec' // Used with vagrant VM on local machine
                         sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
+                    }
+                    echo currentBuild.result
+                }
+        }
+        stage ('Rubocop tests') {
+            agent { label 'cnt7' }
+                steps {
+                    catchError {
+                        sh 'cd ~/workspace/work-env-pipe/ss_trainee && rubocop -D' //Used with cloud instance
                     }
                     echo currentBuild.result
                 }
