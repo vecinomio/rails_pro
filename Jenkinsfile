@@ -26,7 +26,7 @@ pipeline {
                     sh 'gcloud compute instances start cnt7 --zone=europe-west3-c'
                 }
         }
-        stage ('Tests') {
+        stage ('RSpec tests') {
             agent { label 'cnt7' }
                 steps {
                     catchError {
@@ -36,7 +36,16 @@ pipeline {
                     echo currentBuild.result
                 }
         }
-
+        stage ('Rubocop tests') {
+            agent { label 'cnt7' }
+            options { skipDefaultCheckout() }
+                steps {
+                    catchError {
+                        sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rubocop -D' //Used with cloud instance
+                    }
+                    echo currentBuild.result
+                }
+        }
         stage ('Turn off cnt7 instance') {
             agent { label 'master' }
             options { skipDefaultCheckout() }

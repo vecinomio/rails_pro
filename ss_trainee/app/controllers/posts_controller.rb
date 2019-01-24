@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
   def index
     @post = Post.all
@@ -18,7 +20,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
 
-    if (@post.update(post_params))
+    if @post.update(post_params)
       redirect_to @post
     else
       render 'edit'
@@ -32,10 +34,10 @@ class PostsController < ApplicationController
   end
 
   def create
-    #render plain: params[:post].inspect
+    # render plain: params[:post].inspect
     @post = Post.new(post_params)
 
-    if (@post.save)
+    if @post.save
       redirect_to @post
     else
       render 'new'
@@ -45,5 +47,4 @@ class PostsController < ApplicationController
   private def post_params
     params.require(:post).permit(:title, :body)
   end
-
 end
