@@ -1,9 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-#Hello12345
-#9860809569857
-
-
+# Hello12345
+# 9860809569857
 
 RSpec.describe StatsController, type: :controller do
   describe '#bark' do
