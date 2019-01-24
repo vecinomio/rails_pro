@@ -38,14 +38,14 @@ pipeline {
         }
         stage ('Rubocop tests') {
             agent { label 'cnt7' }
+            options { skipDefaultCheckout() }
                 steps {
                     catchError {
-                        sh 'cd ~/workspace/work-env-pipe/ss_trainee && rubocop -D' //Used with cloud instance
+                        sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rubocop -D' //Used with cloud instance
                     }
                     echo currentBuild.result
                 }
         }
-
         stage ('Turn off cnt7 instance') {
             agent { label 'master' }
             options { skipDefaultCheckout() }
