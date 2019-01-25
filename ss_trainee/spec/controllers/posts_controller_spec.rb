@@ -22,7 +22,7 @@ RSpec.describe 'Redirecting to the page: About us', type: :feature do
 end
 
 RSpec.describe 'Creating a new post', type: :feature do
-  scenario 'User clicks on "Add post" & create a new post with title: 
+  scenario 'User clicks on "Add post" & create a new post with title:
   Sometitle' do
     # 1. go to root where will be button to Add New Book:
     visit '/'

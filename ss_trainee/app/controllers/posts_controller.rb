@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# controller for posts
 class PostsController < ApplicationController
   def index
     @post = Post.all
@@ -44,6 +45,7 @@ class PostsController < ApplicationController
     end
   end
 
+  # post_params method
   private def post_params
     params.require(:post).permit(:title, :body)
   end
