@@ -22,7 +22,8 @@ RSpec.describe 'Redirecting to the page: About us', type: :feature do
 end
 
 RSpec.describe 'Creating a new post', type: :feature do
-  scenario 'User clicks on the link: Add post & create a new post with title: Sometitle' do
+  scenario 'User clicks on "Add post" & create a new post with title: 
+  Sometitle' do
     # 1. go to root where will be button to Add New Book:
     visit '/'
     # 2. click on Add New Book button
@@ -31,7 +32,7 @@ RSpec.describe 'Creating a new post', type: :feature do
     fill_in 'post_title', with: 'Sometitle'
     # 4. Click on submit form button
     click_button 'Save Post'
-    # 5. Then we should be redirected to show page with book details (book title)
+    # 5. Than we should be redirected to show page with book details(book title)
     expect(page).to have_content('Sometitle')
   end
 end
