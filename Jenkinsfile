@@ -4,8 +4,10 @@ pipeline {
     stages {
         stage ('Configure test rails env') {
             steps {
-                sh 'pwd'
-                sh 'bundle install'
+                dir('ss_trainee') {
+                    sh 'pwd'
+                    sh 'bundle install'
+                }
             }
         }
         stage ('Run rspec tests') {
