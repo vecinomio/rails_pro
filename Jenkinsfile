@@ -25,12 +25,13 @@ pipeline {
                         try {
                             sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
                             currentBuild.result = 'SUCCESS'
-                            echo "result is: ${currentBuild.currentResult}"
+                            //echo "result is: ${currentBuild.currentResult}"
                         }
                         catch (exc) {
                             currentBuild.result = 'FAILURE'
-                            echo ${currentBuild.currentResult}
+                            //echo "result is: ${currentBuild.currentResult}"
                         }
+                    echo "result is: ${currentBuild.currentResult}"
                     }
                     //catchError {
                         //sh 'vagrant provision --provision-with rspec' // Used with vagrant VM on local machine
@@ -47,11 +48,11 @@ pipeline {
                         try {
                             sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rubocop -D' //Used with cloud instance                      
                             currentBuild.result = 'SUCCESS'
-                            echo ${currentBuild.currentResult}
+                            echo "result is: ${currentBuild.currentResult}"
                         }
                         catch (exc) {
                             currentBuild.result = 'UNSTABLE'
-                            echo ${currentBuild.currentResult}
+                            echo "result is: ${currentBuild.currentResult}"
                         }
                     }
                 }
