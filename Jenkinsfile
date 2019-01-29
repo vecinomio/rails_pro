@@ -29,11 +29,20 @@ pipeline {
         stage ('RSpec tests') {
             agent { label 'cnt7' }
                 steps {
-                    catchError {
-                        //sh 'vagrant provision --provision-with rspec' // Used with vagrant VM on local machine
-                        sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
+                    script {
+                        try {
+                            sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
+                        }
+                        catch (exc) {
+                            echo 'Testing failed!'
+                            currentBuild.result = 'UNSTABLE'
+                        }
                     }
-                    echo currentBuild.result
+                    //catchError {
+                        //sh 'vagrant provision --provision-with rspec' // Used with vagrant VM on local machine
+                        //sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
+                    //}
+                    //echo currentBuild.result
                 }
         }
         stage ('Rubocop tests') {
@@ -42,7 +51,6 @@ pipeline {
                 steps {
                     script {
                         try {
-                            echo 'Running tests...'
                             sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rubocop -D' //Used with cloud instance
                         }
                         catch (exc) {
