@@ -32,10 +32,11 @@ pipeline {
                     script {
                         try {
                             sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
+                            currentBuild.result = 'SUCCESS'
                         }
                         catch (exc) {
                             echo 'Testing failed!'
-                            currentBuild.result = 'UNSTABLE'
+                            currentBuild.result = 'FAILURE'
                         }
                     }
                     //catchError {
@@ -51,17 +52,14 @@ pipeline {
                 steps {
                     script {
                         try {
-                            sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rubocop -D' //Used with cloud instance
+                            sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rubocop -D' //Used with cloud instance                      
+                            currentBuild.result = 'SUCCESS'
                         }
                         catch (exc) {
                             echo 'Testing failed!'
                             currentBuild.result = 'UNSTABLE'
                         }
                     }
-                    //catchError {
-                        //sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rubocop -D' //Used with cloud instance
-                    //}
-                    //echo currentBuild.result
                 }
         }
         stage ('Turn off cnt7 instance') {
