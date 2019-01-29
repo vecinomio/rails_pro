@@ -17,28 +17,7 @@ pipeline {
                     echo 'Starting instance'
                     sh 'gcloud compute instances start cnt7 --zone=europe-west3-c'
                 }
-        }
-        stage ('RSpec tests') {
-            agent { label 'cnt7' }
-                steps {
-                    script {
-                        try {
-                            sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
-                            currentBuild.result = 'SUCCESS'
-                            echo currentBuild.result
-                        }
-                        catch (exc) {
-                            currentBuild.result = 'FAILURE'
-                            echo currentBuild.result
-                        }
-                    }
-                    //catchError {
-                        //sh 'vagrant provision --provision-with rspec' // Used with vagrant VM on local machine
-                        //sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
-                    //}
-                    //echo currentBuild.result
-                }
-        }
+        } 
         stage ('Rubocop tests') {
             agent { label 'cnt7' }
             options { skipDefaultCheckout() }
@@ -47,13 +26,32 @@ pipeline {
                         try {
                             sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rubocop -D' //Used with cloud instance                      
                             currentBuild.result = 'SUCCESS'
-                            echo currentBuild.result
                         }
                         catch (exc) {
                             currentBuild.result = 'UNSTABLE'
-                            echo currentBuild.result
                         }
+                    echo "result is: ${currentBuild.currentResult}"
                     }
+                }
+        }    
+        stage ('RSpec tests') {
+            agent { label 'cnt7' }
+                steps {
+                    script {
+                        try {
+                            sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
+                            currentBuild.result = 'SUCCESS'
+                        }
+                        catch (exc) {
+                            currentBuild.result = 'FAILURE'
+                        }
+                    echo "result is: ${currentBuild.currentResult}"
+                    }
+                    //catchError {
+                        //sh 'vagrant provision --provision-with rspec' // Used with vagrant VM on local machine
+                        //sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
+                    //}
+                    //echo currentBuild.result
                 }
         }
         stage ('Turn off cnt7 instance') {
