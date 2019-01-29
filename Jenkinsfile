@@ -61,7 +61,7 @@ pipeline {
             options { skipDefaultCheckout() }
                 steps {
                     echo 'Stoping instance'
-                    sh 'gcloud compute instances stop cnt7 --zone=europe-west3-c'
+                    //sh 'gcloud compute instances stop cnt7 --zone=europe-west3-c'
                 }
         }
     }
