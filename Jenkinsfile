@@ -40,10 +40,20 @@ pipeline {
             agent { label 'cnt7' }
             options { skipDefaultCheckout() }
                 steps {
-                    catchError {
-                        sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rubocop -D' //Used with cloud instance
+                    script {
+                        try {
+                            echo 'Running tests...'
+                            sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rubocop -D' //Used with cloud instance
+                        }
+                        catch (exc) {
+                            echo 'Testing failed!'
+                            currentBuild.result = 'UNSTABLE'
+                        }
                     }
-                    echo currentBuild.result
+                    //catchError {
+                        //sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rubocop -D' //Used with cloud instance
+                    //}
+                    //echo currentBuild.result
                 }
         }
         stage ('Turn off cnt7 instance') {
