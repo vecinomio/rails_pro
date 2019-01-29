@@ -25,7 +25,7 @@ pipeline {
                         try {
                             sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
                             currentBuild.result = 'SUCCESS'
-                            echo ${currentBuild.currentResult}
+                            echo "result is: ${currentBuild.currentResult}"
                         }
                         catch (exc) {
                             currentBuild.result = 'FAILURE'
