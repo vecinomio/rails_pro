@@ -1,19 +1,11 @@
 pipeline {
     agent none
-
+    
     stages {
-        //stage ('Checkout') { //Used only with pipeline script, not with declarative pipeline
-            //steps {
-                //echo 'Checkout....'
-                //checkout([$class: 'GitSCM', branches: [[name: '*']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/vecinomio/rails_pro.git']]])
-            //}
-        //}
         //stage ('creating vm') { // Used only on local machine, not in cloud service (AWS, GCP)
             //steps {
                 //sh 'echo $USER'
-
                 //sh 'berks install'
-
                 // Create VM (when the job will finish VM will be dead!!!)
                 //sh 'vagrant up --provision'
             //}
@@ -58,7 +50,6 @@ pipeline {
                             echo currentBuild.result
                         }
                         catch (exc) {
-                            //echo 'Testing failed!'
                             currentBuild.result = 'UNSTABLE'
                             echo currentBuild.result
                         }
