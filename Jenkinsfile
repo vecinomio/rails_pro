@@ -25,11 +25,11 @@ pipeline {
                         try {
                             sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
                             currentBuild.result = 'SUCCESS'
-                            echo '${currentBuild.currentResult}'
+                            echo ${currentBuild.currentResult}
                         }
                         catch (exc) {
                             currentBuild.result = 'FAILURE'
-                            echo '${currentBuild.currentResult}'
+                            echo ${currentBuild.currentResult}
                         }
                     }
                     //catchError {
@@ -47,11 +47,11 @@ pipeline {
                         try {
                             sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rubocop -D' //Used with cloud instance                      
                             currentBuild.result = 'SUCCESS'
-                            echo '${currentBuild.currentResult}'
+                            echo ${currentBuild.currentResult}
                         }
                         catch (exc) {
                             currentBuild.result = 'UNSTABLE'
-                            echo '${currentBuild.currentResult}'
+                            echo ${currentBuild.currentResult}
                         }
                     }
                 }
