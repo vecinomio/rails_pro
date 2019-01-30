@@ -12,8 +12,17 @@ pipeline {
         }
         stage ('Run rspec tests') {
             steps {
-                sh 'pwd'
-                sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec'
+                script{
+                    try {
+                        sh 'pwd'
+                        sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec'
+                        currentBuild.result = 'SUCCESS'
+                    }
+                    catch (exc) {
+                        currentBuild.result = 'UNSTABLE'
+                    }
+                echo "result is: ${currentBuild.currentResult}"
+                }
             }
         }
     }
