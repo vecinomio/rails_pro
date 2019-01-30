@@ -15,7 +15,7 @@ pipeline {
             options { skipDefaultCheckout() }
                 steps {
                     echo 'Starting instance'
-                    sh 'gcloud compute instances start cnt7 --zone=europe-west3-c'
+                    //sh 'gcloud compute instances start cnt7 --zone=europe-west3-c'
                 }
         } 
         stage ('Rubocop tests') {
