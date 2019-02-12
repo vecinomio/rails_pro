@@ -60,16 +60,17 @@ pipeline {
                         //sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
                     //}
                     //echo currentBuild.result
-                }
-                publishHTML (target: [
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: false,
-                    keepAll: true,
-                    reportDir: 'coverage',
-                    reportFiles: 'index.html',
-                    reportName: 'HTML Report',
-                    reportTitles: ''
-                ])
+
+                    publishHTML (target: [
+                        allowMissing: false,
+                        alwaysLinkToLastBuild: false,
+                        keepAll: true,
+                        reportDir: 'coverage',
+                        reportFiles: 'index.html',
+                        reportName: 'HTML Report',
+                        reportTitles: ''
+                    ])
+              }
         }
         stage ('Turn off cnt7 instance') {
             agent { label 'master' }
