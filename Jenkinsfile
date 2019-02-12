@@ -21,8 +21,10 @@ pipeline {
         stage ('Prepare environment') {
             agent { label 'cnt7' }
                 steps {
-                    sh 'pwd'
-                    sh 'bundle install'
+                    dir('ss_trainee') {
+                        sh 'pwd'
+                        sh 'bundle install'
+                    }
                 }
         }
         stage ('Rubocop tests') {
