@@ -1,6 +1,6 @@
 pipeline {
     agent none
-    
+
     stages {
         //stage ('creating vm') { // Used only on local machine, not in cloud service (AWS, GCP)
             //steps {
@@ -17,14 +17,23 @@ pipeline {
                     echo 'Starting instance'
                     //sh 'gcloud compute instances start cnt7 --zone=europe-west3-c'
                 }
-        } 
+        }
+        stage ('Prepare environment') {
+            agent { label 'cnt7' }
+                steps {
+                    dir('ss_trainee') {
+                        sh 'pwd'
+                        sh 'bundle install'
+                    }
+                }
+        }
         stage ('Rubocop tests') {
             agent { label 'cnt7' }
             options { skipDefaultCheckout() }
                 steps {
                     script {
                         try {
-                            sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rubocop -D' //Used with cloud instance                      
+                            sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rubocop -D' //Used with cloud instance
                             currentBuild.result = 'SUCCESS'
                         }
                         catch (exc) {
@@ -33,9 +42,10 @@ pipeline {
                     echo "result is: ${currentBuild.currentResult}"
                     }
                 }
-        }    
+        }
         stage ('RSpec tests') {
             agent { label 'cnt7' }
+            options { skipDefaultCheckout() }
                 steps {
                     script {
                         try {
@@ -52,7 +62,17 @@ pipeline {
                         //sh 'cd ~/workspace/work-env-pipe/ss_trainee && bundle exec rspec -f d spec' //Used with cloud instance
                     //}
                     //echo currentBuild.result
-                }
+
+                    publishHTML (target: [
+                        allowMissing: false,
+                        alwaysLinkToLastBuild: false,
+                        keepAll: true,
+                        reportDir: 'ss_trainee/coverage',
+                        reportFiles: 'index.html',
+                        reportName: 'HTML Report',
+                        reportTitles: ''
+                    ])
+              }
         }
         stage ('Turn off cnt7 instance') {
             agent { label 'master' }
