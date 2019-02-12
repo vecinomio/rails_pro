@@ -67,7 +67,7 @@ pipeline {
                         allowMissing: false,
                         alwaysLinkToLastBuild: false,
                         keepAll: true,
-                        reportDir: 'coverage',
+                        reportDir: 'ss_trainee/coverage',
                         reportFiles: 'index.html',
                         reportName: 'HTML Report',
                         reportTitles: ''
