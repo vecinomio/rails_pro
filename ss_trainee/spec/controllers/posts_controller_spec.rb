@@ -21,6 +21,17 @@ RSpec.describe 'Redirecting to the page: About us', type: :feature do
   end
 end
 
+RSpec.describe 'Redirecting to the page: Contact us', type: :feature do
+  scenario 'User clicks on the link: Contact us' do
+    visit '/'
+
+    # fill_in 'form-control', :with => "My Fuc.....ing post"
+    click_link 'Contact us'
+
+    expect(page).to have_text("Let's connect")
+  end
+end
+
 RSpec.describe 'Creating a new post', type: :feature do
   scenario 'User clicks on "Add post" & create a new post with title:
   Sometitle' do

@@ -8,3 +8,10 @@ RSpec.describe PagesController, type: :controller do
     expect(response.status).to eq(200)
   end
 end
+
+RSpec.describe PagesController, type: :controller do
+  it 'returns the page code status 200' do
+    get :contacts
+    expect(response.status).to eq(200)
+  end
+end
